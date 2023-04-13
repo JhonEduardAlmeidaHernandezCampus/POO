@@ -1,0 +1,45 @@
+body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    margin: 0;
+}
+
+.diseñoTabla{
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.diseñoTabla thead th{
+    justify-content: center;
+    padding: 10px;
+    width: 150px;
+    border: none;
+    box-shadow: 5px 5px 8px rgba(0,0,0,0.4);
+}
+
+.diseñoTabla tbody th{
+    justify-content: center;
+    padding: 10px;
+    width: 150px;
+    border-left: none;
+    border-right: none;
+    box-shadow: 5px 5px 8px rgba(0,0,0,0.4);
+}
+
+
+h1{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}

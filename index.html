@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lapiz</title>
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <h1>Clases</h1>
+    <form name="formulario">
+        <fieldset>
+            <legend>Clase Lapiz</legend>
+            <label>Color</label>
+            <input type="color" name="color"><br>
+            <label>Dimension</label>
+            <input type="range" name="dimension" min="0" max="100" value="50"><br><br>
+            <fieldset>
+                <legend>Marca</legend>
+                <input type="radio" name="marca" value="Mongo" checked><label>Mongo</label><br>
+                <input type="radio" name="marca" value="Norma"><label>Norma</label><br>
+                <input type="radio" name="marca" value="Fabel Castle"><label>Fabel Castle</label><br>
+                <input type="radio" name="marca" value="Big"><label>Big</label><br>
+            </fieldset><br>
+            <fieldset>
+                <legend>Borrador</legend>
+                <input type="radio" name="borrador" value="Tiene" checked><label>Tiene</label><br>
+                <input type="radio" name="borrador" value="No Tiene"><label>No tiene</label><br>
+            </fieldset><br>
+            <fieldset>
+                <legend>Material</legend>
+                <input type="radio" name="material" value="Madera" checked><label>Madera</label><br>
+                <input type="radio" name="material" value="Goma"><label>Goma</label><br>
+            </fieldset><br>
+            <input type="submit" value="Enviar">
+        </fieldset>
+    </form>
+    <br><br><br>
+    <table border="solid" class="diseñoTabla">
+        <thead>
+            <tr>
+                <th>Color</th>
+                <th>Dimension</th>
+                <th>Marca</th>
+                <th>Borrador</th>
+                <th>Material</th>
+            </tr>
+        </thead>
+        <tbody id="s">
+
+        </tbody>
+    </table>
+</body>
+</html>
