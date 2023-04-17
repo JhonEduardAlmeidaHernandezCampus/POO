@@ -1,4 +1,3 @@
-// cosas que hacen mas cosas que hacen muchas mas cosas
 let rango = document.querySelector(`[name="dimension"]`);
 let formulario = document.querySelector(`[name="formulario"]`);
 let color = document.querySelector(`[name="color"]`);
@@ -72,22 +71,33 @@ addEventListener("DOMContentLoaded", (e)=> {
     color.value = defaultPencil.color;
 })
 
-// cosa para obtener valores de un formulario
+// Evento de escucha para guardar los datos que se ingresen en el formulario
 formulario.addEventListener("submit", (e)=> {
     diferent += 1;
+    // Esto sirve para que el formulario no se recargue 
     e.preventDefault();
+    // Creamos una lista vacia, si no va a marcar error 
     let pencil = new lapiz({});
 
-    //cosa para poner los valores en el html
-    document.querySelector('#s').insertAdjacentHTML("beforeend", `
-    <tr>
-    <th>${pencil.getColor()}</th>
-    <th>${pencil.getDimen()}</th>
-    <th>${pencil.getMarca()}</th>
-    <th>${pencil.getBorrador()}</th>
-    <th>${pencil.getMaterial()}</th>
-    </tr>
-    `);
+    // Aqui se va a mostrar los datos que se guardan en el formulario
+    document.querySelector('#mostrarTabla').insertAdjacentHTML("beforeend", `
+                                                                            <tr>
+                                                                            <th id="MyColor${diferent}"></th>
+                                                                                <th>${pencil.getDimen()}</th>
+                                                                                <th>${pencil.getMarca()}</th>
+                                                                                <th>${pencil.getBorrador()}</th>
+                                                                                <th>${pencil.getMaterial()}</th>
+                                                                            </tr>
+                                                                            `);
+
+    let colorDiv = document.querySelector(`#MyColor${diferent}`);
+
+    let myColor = {backgroundColor: color.value,
+                   with: "100px",
+                   heigth:"100px"
+
+    }
+
+    Object.assign(colorDiv.style, myColor)
 
 });
-
